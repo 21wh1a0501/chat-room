@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge" />
+    <title>Real time chat application</title>
+    <link rel = "stylesheet" href = "styles.css" />
+
+    <script
+      src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"
+      integrity = "sha512-PU5S6BA03fRv1Q5fpwXjg5nlRrgdoguZ74urFInkbABMCENyx5oP3hrDzYMMPh3qdLdknIvrGj3yqZ4JuU7Nag=="
+      crossorigin = "anonymous"
+      referrerpolicy = "no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <div class = "app">
+      <div class = "chat-app">
+        <div id = "sidebar" class = "left-sidebar">
+          <div class = "logo-text">
+            <span> CHAT <span class = "colored"> App</span></span>
+          </div>
+
+          <span class = "user-label">Users</span>
+          <div id = "active-users-list" class = "active-users-list"></div>
+        </div>
+
+        <div class = "chat-area">
+          <div class = "chat-bg">
+            <div id = "chat" class = "chat"></div>
+
+            <div class = "chat-input">
+              <input type = "text" id = "messageInput" placeholder = "Enter message"/>
+              <button id = "send-message-btn" class = "send-message-btn" id = "send"> send message </button>
+            </div>
+          </div>
+        </div>
+
+        <div class = "right-sidebar">
+            <span class = "room-label">Rooms</span>
+          <div id = "active-rooms-list" class = "active-rooms-list"></div>
+
+          <div class = "room-input">
+            <input type = "text" id = "roomInput" placeholder = "Create new room" />
+            <button id = "room-add-icon" class = "room-add-icon"> add </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src = "app.js"></script>
+  </body>
+</html>
